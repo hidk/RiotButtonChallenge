@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,maximum-scale=1">
+    <title>My Riot Buttons</title>
+    <script src="https://cdn.jsdelivr.net/riot/3.0/riot+compiler.min.js"></script>
+    <script type="riot/tag" src="./my-button.tag"></script>
+    <script type="riot/tag" src="./my-button-group.tag"></script>
+</head>
+<body>
+    <h1>My Riot Buttons</h1>
+    <my-button></my-button>
+    <script>
+        // ボタンを単体で呼び出す。チャレンジ１と２用
+        riot.mount("my-button");
+    </script>
+
+    <hr>
+
+    <h1>チャレンジ</h1>
+
+    <ul>
+      <li>
+        確認は<strong>Firefox</strong>か<strong>Safari</strong>あたりで
+      </li>
+      <li>
+        Chromeはセキュリティの関係でローカルだとうまく動かせないぞ
+      </li>
+      <li>
+        JavaScript習熟度は初級くらいでOK
+      </li>
+      <li>
+        Riotのことは、このへんを見れば全部わかるぞ → <a href="http://riotjs.com/v2/ja/guide/">カスタムタグ · Riot.js</a>
+      </li>
+    </ul>
+
+    <h2>1: ボタンのカスタムタグを作ろう</h2>
+    <ul>
+      <li>
+        `my-botton.tag`を改造しよう
+      </li>
+      <li>
+        ボタン名をオプションで指定できるようにしよう
+      </li>
+      <li>
+        ボタンの見た目を2種類用意して、マウント時のオプションで指定できるようにしよう
+      </li>
+      <li>
+        ボタンクリックしたら、ボタン名をalert()で表示しよう
+      </li>
+    </ul>
+
+    <h2>2: ボタンを２つ並べるカスタムタグを作ろう</h2>
+    <ul>
+      <li>
+        `my-button-group`を改造しよう
+      </li>
+      <li>
+        親(index.html)が子(my-button-group)をマウントし、子が孫(my-button)をマウントする構造にしよう
+      </li>
+      <li>
+        作成した`my-botton`を2つ横並びで設置しよう
+      </li>
+      <li>
+        2つのボタンはそれぞれ違った見た目にしよう
+      </li>
+      <li>
+        2つのボタンのクリック時のアクションを別々にしよう
+      </li>
+    </ul>
+
+    <h3>3: ボタンを並べるタグにオプションを与えて、ボタンの名前と見た目、クリック動作を定義しよう</h3>
+    <ul>
+      <li>
+        `my-button-group`を改造しよう
+      </li>
+      <li>
+        子(my-button-group)をマウントする時にオプションを与えて、孫(my-button)まで定義しよう
+      </li>
+      <li>
+        孫(my-button)のクリックアクションを親(index.html)の気分次第で自由に変えられるようにしよう
+      </li>
+    </ul>
+</body>
