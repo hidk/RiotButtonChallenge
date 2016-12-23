@@ -10,9 +10,11 @@
 </head>
 <body>
     <h1>My Riot Buttons</h1>
-    <my-button></my-button>
+    <!-- カスタムタグ外でも、タグの属性としてオプションを与えられる -->
+    <my-button name="NG" type="negative"></my-button>
+    <my-button name="OK" type="positive"></my-button>
     <script>
-        // ボタンを単体で呼び出す。チャレンジ１と２用
+        // ボタンをまとめて呼び出す
         riot.mount("my-button");
     </script>
 

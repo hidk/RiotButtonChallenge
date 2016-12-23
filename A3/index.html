@@ -10,10 +10,22 @@
 </head>
 <body>
     <h1>My Riot Buttons</h1>
-    <my-button></my-button>
+    <!-- オブジェクト型を渡したいので、ここではオプション指定しない -->
+    <my-button-group></my-button-group>
     <script>
-        // ボタンを単体で呼び出す。チャレンジ１と２用
-        riot.mount("my-button");
+        //マウントオプションの設定
+        var buttonActions = {
+            alert: function(message) {alert(message);},
+            log: function(message) {console.log(message);},
+        }
+
+        var buttonOpts = [
+            {name: "NG", type: "negative", action: buttonActions.alert},
+            {name: "OK", type: "positive", action: buttonActions.log}
+        ];
+
+        // オプションとしてオブジェクトを与えてマウント
+        riot.mount("my-button-group", {options: buttonOpts});
     </script>
 
     <hr>
